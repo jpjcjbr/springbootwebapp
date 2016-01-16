@@ -38,6 +38,7 @@ public class ProductRepositoryTest {
         assertNull(product.getId()); //null before save
         productRepository.save(product);
         assertNotNull(product.getId()); //not null after save
+        
         //fetch from DB
         Product fetchedProduct = productRepository.findOne(product.getId());
 
